@@ -34,6 +34,10 @@
             fetchPointsWithinBounds();
         });
 
+        $scope.$on('leafletDirectiveMap.moveend', function(event) {
+            fetchPointsWithinBounds();
+        });
+
         var existingMarkerIds = {};
 
         function fetchPointsWithinBounds() {
