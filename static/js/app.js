@@ -20,7 +20,6 @@
                 lng: 151.21242949999998,
                 zoom: 15
             },
-            markers: {},
             events: {
                 map: {
                     enable: ['load'],
@@ -29,22 +28,36 @@
             }
         });
 
+        $scope.markers = new Array();
+
         $scope.$on('leafletDirectiveMap.load', function(event) {
             fetchPointsWithinBounds();
         });
 
+        var existingMarkerIds = {};
+
         function fetchPointsWithinBounds() {
-            console.log(leafletData.getMap());
             leafletData.getMap().then(function(map) {
                 var bounds = map.getBounds();
                 var fetchPointsSuccess = function(points) {
                     points.forEach(function(point) {
-                        console.log(point);
+                        createMarkerForPoint(point);
                     });
                 };
 
                 pointsService.getPoints(bounds).success(fetchPointsSuccess);
             });
+        }
+
+        function createMarkerForPoint(point) {
+            if (!existingMarkerIds[point.osmId]) { // Don't want to add markers that already exist
+                $scope.markers.push({
+                    lat: point.latitude,
+                    lng: point.longitude,
+                    message: point['name']
+                });
+                existingMarkerIds[point.osmId] = true;
+            }
         }
     }]);
 

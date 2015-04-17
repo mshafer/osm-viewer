@@ -16,8 +16,8 @@ def points():
             'osmId': '2433178371.0',
             'name':  'Caroline Chisholm Drive near Junction Road',
             'type': 'bus',
-            'latitude': 150.9719909,
-            'longitude': -33.7745365
+            'latitude': -33.8658763,
+            'longitude': 151.21242949999998
         }
     ]
     return Response(json.dumps(points),  mimetype='application/json')
