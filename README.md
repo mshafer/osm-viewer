@@ -1,6 +1,6 @@
 # OSMViewer
 
-![Screenshot of OSMViewer](http://i.imgur.com/ZuMjw6s.jpg)
+![Screenshot of OSMViewer](http://i.imgur.com/ln44oFz.jpg)
 
 A web application for viewing [OpenStreetMap](https://www.openstreetmap.org/) data on a map. It was mainly just a chance to 
 have a play around with:
