@@ -21,4 +21,4 @@ $ pip install -r requirements.txt
 $ python osmviewer.py
 ```
 
-The app will now be running at http://localhost:5000/
+The app will now be running at [http://localhost:5000/](http://localhost:5000/)
