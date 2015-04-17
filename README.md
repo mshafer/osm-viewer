@@ -10,9 +10,13 @@ have a play around with:
 - [PostgreSQL](http://www.postgresql.org/) with [PostGIS](http://postgis.net/)
 - [Flask](http://flask.pocoo.org/)
 
-## Get it running
+## Requirements
 
-Use [osm2pgsql](http://wiki.openstreetmap.org/wiki/Osm2pgsql) to load some OpenStreetMap data into a PostgreSQL database. Data sets for major cities are available at [Mapzen](https://mapzen.com/metro-extracts/).
+The app pulls data from a PostgreSQL + PostGIS database, housing OpenStreetMap data. You can find data sets for major cities at [Mapzen](https://mapzen.com/metro-extracts/), then load the data using [osm2pgsql](http://wiki.openstreetmap.org/wiki/Osm2pgsql).
+
+Edit `app.config['DATABASE_URL']` in `osmviewer.py` before starting the app. 
+
+## Get it running
 
 ```
 $ cd OSMViewer
