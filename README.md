@@ -18,7 +18,7 @@ Edit `app.config['DATABASE_URL']` in `osmviewer.py` before starting the app.
 
 ## Get it running
 
-```
+```bash
 $ cd OSMViewer
 # Create a virtualenv if you want
 $ pip install -r requirements.txt
@@ -26,3 +26,8 @@ $ python osmviewer.py
 ```
 
 The app will now be running at [http://localhost:5000/](http://localhost:5000/)
+
+## TODO
+
+- Currently the client asks the server for all features within the map's bounds, but this will overlap with regions that have already been fetched. Need to make sure we're only querying for new regions.
+- Add UI for selecting the type of features to display. Currently this is hardcoded in the server to only return one type of feature.
