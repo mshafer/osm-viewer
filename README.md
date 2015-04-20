@@ -20,7 +20,7 @@ Edit `app.config['DATABASE_URL']` in `osmviewer.py` before starting the app.
 
 ```bash
 $ git clone git@github.com:mshafer/osm-viewer.git
-$ cd OSMViewer
+$ cd osm-viewer
 $ pip install -r requirements.txt
 # Create a virtualenv if you want
 # Update osmviewer.py with the URL of your PostgreSQL instance
